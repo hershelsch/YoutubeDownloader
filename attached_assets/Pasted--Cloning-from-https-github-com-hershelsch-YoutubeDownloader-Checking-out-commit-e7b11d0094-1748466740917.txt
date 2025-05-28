@@ -1,0 +1,70 @@
+==> Cloning from https://github.com/hershelsch/YoutubeDownloader
+==> Checking out commit e7b11d00948e308d930f6c874768a85e3cc23153 in branch main
+==> Downloading cache...
+==> Transferred 215MB in 8s. Extraction took 4s.
+==> Using Node.js version 22.14.0 (default)
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Using Bun version 1.1.0 (default)
+==> Docs on specifying a bun version: https://render.com/docs/bun-version
+==> Running build command 'npm install; npm run build'...
+added 4 packages, and audited 519 packages in 1s
+68 packages are looking for funding
+  run `npm fund` for details
+7 moderate severity vulnerabilities
+To address issues that do not require attention, run:
+  npm audit fix
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Run `npm audit` for details.
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+vite v5.4.14 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 1820 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/public/index.html                   0.63 kB │ gzip:   0.38 kB
+../dist/public/assets/index-izbF_i0p.css   61.39 kB │ gzip:  10.87 kB
+../dist/public/assets/index-Dx1l5sc7.js   458.74 kB │ gzip: 142.25 kB
+✓ built in 3.89s
+  dist/index.js  14.1kb
+⚡ Done in 4ms
+==> Uploading build...
+==> Uploaded in 8.9s. Compression took 3.1s
+==> Build successful 🎉
+==> Deploying...
+==> Running 'npm run start'
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+9:11:24 PM [express] serving on port 5000
+==> Your service is live 🎉
+WebSocket client connected
+9:11:42 PM [express] POST /api/downloads 200 in 7ms :: {"downloadId":1,"status":"started"}
+WebSocket client disconnected
+9:11:43 PM [express] GET /api/downloads 200 in 5ms
+WebSocket client connected
+Error checking for updates: Status code: 403
+You can disable this check by setting the `YTDL_NO_UPDATE` env variable.
+Download processing error: MinigetError: Status code: 410
+    at ClientRequest.<anonymous> (/opt/render/project/src/node_modules/miniget/dist/index.js:206:27)
+    at Object.onceWrapper (node:events:633:26)
+    at ClientRequest.emit (node:events:518:28)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:716:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+    at TLSSocket.socketOnData (node:_http_client:558:22)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  statusCode: 410
+}
+9:11:45 PM [express] GET /api/downloads 304 in 2ms
+9:11:47 PM [express] GET /api/downloads 304 in 1ms
+9:11:49 PM [express] GET /api/downloads 304 in 1ms
+9:11:51 PM [express] GET /api/downloads 304 in 1ms
+9:11:53 PM [express] GET /api/downloads 304 in 1ms
+9:11:56 PM [express] GET /api/downloads 304 in 2ms
+9:11:58 PM [express] GET /api/downloads 304 in 2ms
